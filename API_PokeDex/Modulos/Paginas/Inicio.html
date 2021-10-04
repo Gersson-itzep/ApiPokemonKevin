@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>API Pokemon</title>
+    <link rel="stylesheet" href="../Estilos.css" type="text/css" />
+</head>
+<body>
+
+  <div id="content">
+
+    <form action="information_pokemon" method="post">
+      <h1 for="">POKEDEX</h1>
+        <label for="">BUSCAR POKEMON:</label>
+        <input type="text" id="nombre" name="nombre" required/>
+        <input type="submit" />
+      </form>
+      <form action="type_pokemons" method="post">    
+        <div id="lista">
+          <label
+            >TIPOS DE POKEMON:
+            <select name="t_pokemon" id="t_pokemon">
+              <option id="opciones" value="">Seleccionar </option>
+              <% for(let i=0; i<List_TiposPokemon.length; i++) {%>
+              <option value=<%= List_TiposPokemon[i] %>> <%= List_TiposPokemon[i] %></option>
+              <% }; %>
+            </select>
+          </label>
+          <input type="submit" />
+        </div>
+      </form>
+
+      <form action="base_experience" method="post">
+        <label for="">EXPERIENCIA:</label>
+        <input type="number" id="min_base" name="min_base" placeholder="Puntos min." required/>
+        <input type="number" id="max_base" name="max_base" placeholder="Puntos max." required/>
+        <input type="submit" />
+      </form>
+      <img src="https://1000marcas.net/wp-content/uploads/2020/01/Pok%C3%A9mon-emblema.jpg">
+   
+    </div>
+
+    
+</body>
+</html>
